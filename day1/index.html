@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = "Just a random string for testing purposes";
+
+      function sumOfTwo(a, b) {
+        if (a === b) {
+          return 3 * a * b;
+        } else {
+          return a + b;
+        }
+      }
+
+      function checkTwoInt(a, b) {
+        if (a + b === 50 || a === 50 || b === 50) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      function removeChar(a) {
+        let arr = str.split("");
+        arr.splice(a, 1);
+        console.log(arr.join(""));
+      }
+
+      function largestInt(a, b, c) {
+        let arr = [a, b, c];
+        let largest = 0;
+
+        for (let i = 0; i <= arr.length; i++) {
+          if (arr[i] >= largest) {
+            largest = arr[i];
+          }
+        }
+        console.log(largest);
+      }
+
+      function rangeOfInt(a, b) {}
+
+      function copyStr(a) {
+        return str.repeat(a);
+      }
+
+      function checkCity(randomstr) {
+        if (typeof randomstr === "string") {
+          if (
+            randomstr.slice(0, 3).toLowerCase() === "los" ||
+            randomstr.slice(0, 3).toLowerCase() === "new"
+          ) {
+            return randomstr;
+          } else {
+            return null;
+          }
+        } else {
+          console.log("please enter a string");
+        }
+      }
+
+      function sumOfArr(a) {
+        if (a.length === 3) {
+          return a.reduce((a, b) => a + b);
+        } else {
+          console.log("The array contains more digits then 3 digits");
+        }
+      }
+
+      function arrOfInt(a) {
+        if (a.length === 2) {
+          if (a.join("").includes("1") || a.join("").includes("3")) {
+            return true;
+          } else {
+            return false;
+          }
+        } else {
+          console.log("The array contains more then 2 digits");
+        }
+      }
+
+      function arrOfNotInt(a) {
+        if (a.length === 2) {
+          if (!(a.join("").includes("1") || a.join("").includes("3"))) {
+            return true;
+          } else {
+            return false;
+          }
+        } else {
+          console.log("The array contains more then 2 digits");
+        }
+      }
+
+      function arrOfStr(a) {
+        let largest = 0;
+        let index;
+        for (let i = 0; i < a.length; i++) {
+          if (a[i].length >= largest);
+          {
+            largest = a[i].length;
+            index = i;
+          }
+        }
+        console.log(`The longest string is '${a[index]}'`);
+      }
+
+      function angleType(a) {
+        const angels = [
+          "Acute angle",
+          "Right angle",
+          "Obtuse angle",
+          "Straight angle",
+        ];
+
+        if (a >= 0 && a < 90) {
+          console.log(`${a} is a ${angels[0]}`);
+        } else if (a > 90 && a < 180) {
+          console.log(`${a} is a ${angels[2]}`);
+        } else if (a == 90) {
+          console.log(`${a} is a ${angels[1]}`);
+        } else {
+          console.log(`${a} is a ${angels[3]}`);
+        }
+      }
+
+      function largestIndex(a) {
+        let b = Math.max(...a);
+        console.log(a.indexOf(b));
+      }
+
+      function largestEvenNumber(a) {
+        let b = [];
+        for (let i = 0; i < a.length; i++) {
+          if (a[i] % 2 == 0) {
+            b.push(a[i]);
+          }
+        }
+        console.log(Math.max(...b));
+      }
+    </script>
+  </body>
+</html>
